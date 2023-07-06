@@ -19,7 +19,7 @@ const cleanCache = (cacheName, limitItem) => {
 }
 
 self.addEventListener('install', (event) => {
-    console.log("Esta instalado :D");
+    console.log("Instalado");
 
     const respCache = caches.open(STATIC_CACHE_NAME).then((cache) => {
         return cache.addAll([
