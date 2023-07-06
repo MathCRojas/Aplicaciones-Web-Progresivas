@@ -1,5 +1,5 @@
 self.addEventListener('install', (event) => {
-    console.log("Esta instalado :D");
+    console.log("Instalado");
 
     const respCache = caches.open('cache-v1').then((cache) => {
         return cache.addAll([
