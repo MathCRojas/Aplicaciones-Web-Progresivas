@@ -3,10 +3,10 @@ self.addEventListener('install', (event) => {
 
     const respCache = caches.open('cache-v1').then((cache) => {
         return cache.addAll([
-            'https://matcrojas.github.io/Aplicaciones-Web-Progresivas/10b/practica4/',
-            'https://matcrojas.github.io/Aplicaciones-Web-Progresivas/10b/practica4/index.html',
-            'https://matcrojas.github.io/Aplicaciones-Web-Progresivas/10b/practica4/css/style.css',
-            'https://matcrojas.github.io/Aplicaciones-Web-Progresivas/10b/practica4/js/app.js',
+            'https://mathcrojas.github.io/Aplicaciones-Web-Progresivas/only-cache/',
+            'https://mathcrojas.github.io/Aplicaciones-Web-Progresivas/only-cache/index.html',
+            'https://mathcrojas.github.io/Aplicaciones-Web-Progresivas/only-cache/css/style.css',
+            'https://mathcrojas.github.io/Aplicaciones-Web-Progresivas/only-cache/js/app.js',
             'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css',
             'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'
         ]);
