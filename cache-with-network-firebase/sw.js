@@ -13,7 +13,7 @@ const cleanCache = (cacheName, limitItems) => {
 };
 
 self.addEventListener('install', (event) => {
-    console.log('SW instalado :D');
+    console.log('SW Installed');
 
     const respCache = caches.open(STATIC_CACHE_NAME).then((cache) => {
         return cache.addAll([
@@ -80,7 +80,6 @@ self.addEventListener('fetch', (event) => {
         }
     })
 
-    //const respCache = caches.match(event.request);
     event.respondWith(resp);
 
 })
