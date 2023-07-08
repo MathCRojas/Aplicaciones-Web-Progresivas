@@ -1,9 +1,9 @@
 {
-    "name": "PWA Notas",
-    "short_name": "NotasPWA",
+    "name": "PWA Notes",
+    "short_name": "NotesPWA",
     "start_url": "/index.html",
     "display": "standalone",
-    "description": "Mi primer aplicacion como PWA Instalable",
+    "description": "PWA Test",
     "orientation": "portrait",
     "background_color": "#134687",
     "theme_color": "#134687",
