@@ -1,4 +1,4 @@
-import { getNotesFireStore, saveNoteFireStore, updateNoteFireStore } from 'https://mathcrojas.github.io/Aplicaciones-Web-Progresivas/tree/main/cache-with-network-firebase/js/firestore-functions.js'
+import { getNotesFireStore, saveNoteFireStore, updateNoteFireStore } from 'https://mathcrojas.github.io/Aplicaciones-Web-Progresivas/cache-with-network-firebase/js/firestore-functions.js'
 
 //Contiene el maximo de notas en  la base de datos
 var maxNotes = 1;
