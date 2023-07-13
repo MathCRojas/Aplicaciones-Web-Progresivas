@@ -26,7 +26,7 @@ const getAllNotes = async (n) => {
             <div class="card" id="note`+ onPage + `">
             <div class="card-body" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-2"> aaaa
                         <!-- La imagen de la nota, si la tiene -->
                             <img src="` +
                         doc.data().image + `"
