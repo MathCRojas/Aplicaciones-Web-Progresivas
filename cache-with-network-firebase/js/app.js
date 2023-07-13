@@ -14,7 +14,7 @@ const getAllNotes = async (n) => {
     let newCard = document.createElement('div');
     //let actualList = onPage;
     maxNotes = doc.size;
-    console.log(doc);
+    console.log("Prueba para el git");
     newCard.innerHTML = '';
 
     doc.forEach((doc) => {
@@ -26,7 +26,7 @@ const getAllNotes = async (n) => {
             <div class="card" id="note`+ onPage + `">
             <div class="card-body" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="row">
-                    <div class="col-2"> aaaa
+                    <div class="col-2">
                         <!-- La imagen de la nota, si la tiene -->
                             <img src="` +
                         doc.data().image + `"
