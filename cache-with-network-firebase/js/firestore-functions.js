@@ -18,7 +18,7 @@ const saveNoteFireStore = async (note, picture) => {
     }
     const docRef = await addDoc(collection(db, 'notes'), {
     text: note.text,
-    image: picture,
+    //image: picture,
     create_at: new Date()
   });
 
