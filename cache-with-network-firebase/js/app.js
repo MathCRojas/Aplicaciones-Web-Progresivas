@@ -66,7 +66,8 @@ const saveNote = async (note, picture) => {
 const btnSaveNote = document.getElementById('btnSaveNote');
 btnSaveNote.addEventListener('click', async () => {
     const textNote = document.getElementById('textNote');
-    if(textNote.trim == "" || textNote == null){
+    console.log(textNote)
+    if(textNote.value.trim == "" || textNote.value == null){
         alert('Porfavor llene la nota')
     }else{
         
@@ -94,7 +95,7 @@ btnUpdateNote.addEventListener('click', async () => {
     const textNote = document.getElementById('nota-text');
     const idNote = document.getElementById('nota-id')
     
-    if(textNote.trim == "" || textNote == null){
+    if(textNote.value.trim == "" || textNote.value == null){
         alert('Porfavor llene la nota')
     }else{
         const note = {
