@@ -30,7 +30,7 @@ const getAllNotes = async (n) => {
                         <!-- La imagen de la nota, si la tiene -->
                             <img src="` +
                         doc.data().image + `"
-                                class="img-fluid rounded" alt="...">
+                                class="img-fluid rounded" alt="..." style="height: 100px; width: 200px;">
                     </div>
                     <div class="col text-truncate">` +
                 doc.data().text
