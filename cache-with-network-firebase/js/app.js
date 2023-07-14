@@ -53,8 +53,8 @@ const getAllNotes = async (n) => {
     limit = 8;
 }
 
-const saveNote = async (note) => {
-    const result = await saveNoteFireStore(note);
+const saveNote = async (note, picture) => {
+    const result = await saveNoteFireStore(note, picture);
     if (result === 'ok') {
         alert('Nota Registrada')
 
@@ -70,7 +70,7 @@ btnSaveNote.addEventListener('click', async () => {
         text: textNote.value
     }
 
-    await saveNote(note)
+    await saveNote(note, picture)
 
     textNote.value = '';
 
@@ -131,13 +131,14 @@ const video = document.getElementById('video');
 const photo = document.getElementById('photo');
 
 const camera = new Camera(video);
+let picture;
 
 btnCamera.addEventListener('click', ()=>{
     camera.power();
 })
 
 btnTakePhoto.addEventListener('click', ()=>{
-    let picture = camera.takePhoto();
+    picture = camera.takePhoto();
     camera.off();
     photo.setAttribute('src', picture);
     console.log("Base = " + picture);
