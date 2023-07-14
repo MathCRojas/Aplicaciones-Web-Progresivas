@@ -77,7 +77,7 @@ btnSaveNote.addEventListener('click', async () => {
 
         await saveNote(note, picture)
 
-        window.location.reload();
+        //window.location.reload();
     }
 });
 
