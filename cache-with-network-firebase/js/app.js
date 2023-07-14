@@ -66,21 +66,24 @@ const saveNote = async (note, picture) => {
 const btnSaveNote = document.getElementById('btnSaveNote');
 btnSaveNote.addEventListener('click', async () => {
     const textNote = document.getElementById('textNote');
-    const note = {
+    if(textNote.trim == "" || textNote == null){
+        alert('Porfavor llene la nota')
+    }else{
+        
+        const note = {
         text: textNote.value
+        }
+
+        await saveNote(note, picture)
+
+        window.location.reload();
     }
-
-    await saveNote(note, picture)
-
-    textNote.value = '';
-
 });
 
 const updateNote = async (note) => {
     const result = await updateNoteFireStore(note);
     if (result === 'ok') {
         alert('Nota Actualizada')
-        window.location.reload();
     } else {
         alert('Nota No Actualizada')
     }
@@ -90,17 +93,18 @@ const btnUpdateNote = document.getElementById('btnUpdateNote');
 btnUpdateNote.addEventListener('click', async () => {
     const textNote = document.getElementById('nota-text');
     const idNote = document.getElementById('nota-id')
-    const note = {
-        id: idNote.value,
-        text: textNote.value
+    
+    if(textNote.trim == "" || textNote == null){
+        alert('Porfavor llene la nota')
+    }else{
+        const note = {
+            id: idNote.value,
+            text: textNote.value
+        }
+            
+        await updateNote(note) 
+        window.location.reload();
     }
-
-    await updateNote(note)
-
-    textNote.value = '';
-
-    window.location.reload();
-
 });
 
 //Para funcionar con el scroll
