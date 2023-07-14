@@ -74,7 +74,7 @@ btnSaveNote.addEventListener('click', async () => {
 
     textNote.value = '';
 
-    await getAllNotes(0);
+    await getAllNotes(maxNotes + 1);
 
 });
 
@@ -131,7 +131,7 @@ const video = document.getElementById('video');
 const photo = document.getElementById('photo');
 
 const camera = new Camera(video);
-let picture;
+let picture = "";
 
 btnCamera.addEventListener('click', ()=>{
     camera.power();
