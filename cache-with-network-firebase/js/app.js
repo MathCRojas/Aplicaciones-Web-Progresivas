@@ -74,7 +74,7 @@ btnSaveNote.addEventListener('click', async () => {
 
     textNote.value = '';
 
-    await getAllNotes(maxNotes + 1);
+    await getAllNotes(0);
 
 });
 
