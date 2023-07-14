@@ -66,7 +66,7 @@ const saveNote = async (note, picture) => {
 const btnSaveNote = document.getElementById('btnSaveNote');
 btnSaveNote.addEventListener('click', async () => {
     const textNote = document.getElementById('textNote');
-    console.log(textNote)
+    console.log(textNote.value)
     if(textNote.value.trim == "" || textNote.value == null){
         alert('Porfavor llene la nota')
     }else{
