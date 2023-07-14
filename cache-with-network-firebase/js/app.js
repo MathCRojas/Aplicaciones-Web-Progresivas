@@ -74,15 +74,13 @@ btnSaveNote.addEventListener('click', async () => {
 
     textNote.value = '';
 
-    await getAllNotes(maxNotes + 1);
-
 });
 
 const updateNote = async (note) => {
     const result = await updateNoteFireStore(note);
     if (result === 'ok') {
         alert('Nota Actualizada')
-
+        window.location.reload();
     } else {
         alert('Nota No Actualizada')
     }
@@ -141,6 +139,5 @@ btnTakePhoto.addEventListener('click', ()=>{
     picture = camera.takePhoto();
     camera.off();
     photo.setAttribute('src', picture);
-    console.log("Base = " + picture);
 
 })
